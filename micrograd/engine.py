@@ -37,6 +37,9 @@ class Value:
         out._backward = _backward
         return out
 
+    def __neg__(self):
+        return self * -1
+
     def backward(self):
         topo = []
         visited = set()
